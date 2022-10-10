@@ -2,15 +2,13 @@
 
 namespace GNAHotelSolutions\LaravelGoogleTranslate;
 
-use Illuminate\Support\Facades\Http;
+use Google\Cloud\Translate\V2\TranslateClient;
 
 class GoogleTranslate
 {
     protected $from;
 
     protected $to;
-
-    protected $apiUrl = 'https://translation.googleapis.com/language/translate/v2';
 
     public function from(string $locale): self
     {
@@ -28,12 +26,10 @@ class GoogleTranslate
 
     public function translate(string $text): string
     {
-        return Http::withToken(config('google-translate.key'))
-            ->post($this->apiUrl, [
+        return (new TranslateClient(['key' => config('google-translate.key')]))
+            ->translate($text, [
                 'source' => $this->from,
-                'target' => $this->to,
-                'format' => 'text',
-                'q' => $text,
-            ])->json('data')->translations[0]->translatedText;
+                'target' => $this->to
+            ])['text'];
     }
 }
