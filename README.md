@@ -17,7 +17,7 @@ composer require gnahotelsolutions/laravel-google-translate
 ## Usage
 
 ```php
-// Usage description here
+$textInSpanish = GoogleTranslate::from('en')->to('es')->translate('Hello there!');
 ```
 
 ### Testing

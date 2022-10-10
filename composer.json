@@ -46,7 +46,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "GoogleTranslateServiceProvider"
+                "GNAHotelSolutions\\LaravelGoogleTranslate\\GoogleTranslateServiceProvider"
             ],
             "aliases": {
                 "GoogleTranslate": "GNAHotelSolutions\\LaravelGoogleTranslate\\GoogleTranslate"
