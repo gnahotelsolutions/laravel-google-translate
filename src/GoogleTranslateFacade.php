@@ -5,17 +5,17 @@ namespace GNAHotelSolutions\LaravelGoogleTranslate;
 use Illuminate\Support\Facades\Facade;
 
 /**
- * @see \Gnahotelssolutions\LaravelGoogleTranslate\Skeleton\SkeletonClass
+ * @see \GNAHotelSolutions\LaravelGoogleTranslate\GoogleTranslate
  */
-class LaravelGoogleTranslateFacade extends Facade
+class GoogleTranslateFacade extends Facade
 {
     /**
      * Get the registered name of the component.
      *
      * @return string
      */
-    protected static function getFacadeAccessor()
+    protected static function getFacadeAccessor(): string
     {
-        return 'laravel-google-translate';
+        return 'google-translate';
     }
 }
