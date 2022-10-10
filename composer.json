@@ -1,9 +1,11 @@
 {
     "name": "gnahotelsolutions/laravel-google-translate",
-    "description": "Simple wrapper around Google Translate API",
+    "description": "Simple wrapper for Google Translate API",
     "keywords": [
         "gnahotelsolutions",
-        "laravel-google-translate"
+        "laravel-google-translate",
+        "google translate",
+        "php"
     ],
     "homepage": "https://github.com/gnahotelsolutions/laravel-google-translate",
     "license": "MIT",
@@ -44,10 +46,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "GNAHotelSolutions\\LaravelGoogleTranslate\\LaravelGoogleTranslateServiceProvider"
+                "GoogleTranslateServiceProvider"
             ],
             "aliases": {
-                "LaravelGoogleTranslate": "GNAHotelSolutions\\LaravelGoogleTranslate\\LaravelGoogleTranslateFacade"
+                "GoogleTranslate": "GNAHotelSolutions\\LaravelGoogleTranslate\\GoogleTranslate"
             }
         }
     }

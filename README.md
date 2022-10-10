@@ -1,10 +1,10 @@
-# Very short description of the package
+# Google Translate API wrapper for Laravel
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/gnahotelsolutions/laravel-google-translate.svg?style=flat-square)](https://packagist.org/packages/gnahotelsolutions/laravel-google-translate)
 [![Total Downloads](https://img.shields.io/packagist/dt/gnahotelsolutions/laravel-google-translate.svg?style=flat-square)](https://packagist.org/packages/gnahotelsolutions/laravel-google-translate)
 ![GitHub Actions](https://github.com/gnahotelsolutions/laravel-google-translate/actions/workflows/main.yml/badge.svg)
 
-This is where your description should go. Try and limit it to a paragraph or two, and maybe throw in a mention of what PSRs you support to avoid any confusion with users and contributors.
+A small Laravel package to interact with Google Translate API in an easy way.
 
 ## Installation
 
@@ -46,6 +46,10 @@ If you discover any security related issues, please email dllop@gnahs.com instea
 ## License
 
 The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
+
+## Documentation
+
+- [Official Google Translate Documentation](https://cloud.google.com/translate/docs)
 
 ## Laravel Package Boilerplate
 
