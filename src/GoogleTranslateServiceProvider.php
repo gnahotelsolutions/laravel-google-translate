@@ -2,13 +2,11 @@
 
 namespace GNAHotelSolutions\LaravelGoogleTranslate;
 
+use Google\Cloud\Translate\V2\TranslateClient;
 use Illuminate\Support\ServiceProvider;
 
 class GoogleTranslateServiceProvider extends ServiceProvider
 {
-    /**
-     * Bootstrap the application services.
-     */
     public function boot(): void
     {
         if ($this->app->runningInConsole()) {
@@ -19,17 +17,16 @@ class GoogleTranslateServiceProvider extends ServiceProvider
         }
     }
 
-    /**
-     * Register the application services.
-     */
     public function register(): void
     {
-        // Automatically apply the package configuration
         $this->mergeConfigFrom(__DIR__.'/../config/config.php', 'google-translate');
 
-        // Register the main class to use with the facade
         $this->app->singleton('google-translate', function () {
             return new GoogleTranslate;
+        });
+
+        $this->app->singleton(TranslateClient::class, function () {
+            return new TranslateClient(['key' => config('google-translate.key')]);
         });
     }
 }

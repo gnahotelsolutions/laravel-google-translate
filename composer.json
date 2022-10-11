@@ -50,7 +50,7 @@
                 "GNAHotelSolutions\\LaravelGoogleTranslate\\GoogleTranslateServiceProvider"
             ],
             "aliases": {
-                "GoogleTranslate": "GNAHotelSolutions\\LaravelGoogleTranslate\\GoogleTranslate"
+                "GoogleTranslate": "GNAHotelSolutions\\LaravelGoogleTranslate\\Facade\\GoogleTranslate"
             }
         }
     }

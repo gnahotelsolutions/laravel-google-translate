@@ -26,7 +26,7 @@ class GoogleTranslate
 
     public function translate(string $text): string
     {
-        return (new TranslateClient(['key' => config('google-translate.key')]))
+        return app(TranslateClient::class)
             ->translate($text, [
                 'source' => $this->from,
                 'target' => $this->to
