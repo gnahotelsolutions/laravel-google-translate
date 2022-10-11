@@ -1,13 +1,13 @@
 <?php
 
-namespace GNAHotelSolutions\LaravelGoogleTranslate;
+namespace GNAHotelSolutions\LaravelGoogleTranslate\Facade;
 
 use Illuminate\Support\Facades\Facade;
 
 /**
  * @see \GNAHotelSolutions\LaravelGoogleTranslate\GoogleTranslate
  */
-class GoogleTranslateFacade extends Facade
+class GoogleTranslate extends Facade
 {
     /**
      * Get the registered name of the component.
